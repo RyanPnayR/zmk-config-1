@@ -36,7 +36,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -48,9 +48,9 @@
                 
        		default_layer {
 		bindings = <
-		&kp Q &kp W &kp F &kp P &kp G 						&kp J &kp L &kp U  &kp Y &kp BSPC 
+		&td ESC Q &kp W &kp F &kp P &kp G 						&kp J &kp L &kp U  &kp Y &kp BSPC 
 		&kp A &kp R &kp S &kp T &kp G 			       	    &kp H &kp N &kp E &kp I &kp O
-		&kp Z &kp X &kp C &kp V &kp B				        &kp K &kp M &kp COMMA &kp DOT &kp SQT 
+		&kp Z &kp X &kp C &kp V &kp B				        &kp K &kp M &kp COMMA &kp DOT &td SQT DQT
           				&mt LC(LS(LALT)) SPACE &td LSHIFT RALT  				&sk RCTRL &to 1
 		>;
 		};
@@ -75,7 +75,7 @@
 		
 		tri_layer {
 		bindings = <
-		&trans  &mwh SCROLL_LEFT    &mmv MOVE_UP    &mwh SCROLL_RIGHT    &kp N5 			&kp LG(LBKT)   &kp LC(LS(TAB))   &kp RC(TAB) &kp LG(RBKT) &trans
+		&kp ESC  &mwh SCROLL_LEFT    &mmv MOVE_UP    &mwh SCROLL_RIGHT    &kp N5 			&kp LG(LBKT)   &kp LC(LS(TAB))   &kp RC(TAB) &kp LG(RBKT) &trans
 		&kp F1 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp DEL  						&kp LEFT &kp DOWN  &kp UP &kp RIGHT &kp ENTER 
 		&td LG(GRAVE) GRAVE &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN &trans   				&mkp LCLK &kp PG_DN  &kp K_VOL_DN  &trans &trans   
 					 &to 0 &trans  					&sk RALT &to 1 
